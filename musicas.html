@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Adicione uma música!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            height: 100vh;
+            background-color: #b2f0e4;
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            border: 2px solid #000000;
+            margin-top: 50px; 
+        }
+
+        h2 {
+            font-family: "Jersey 10";
+            font-size: 48px; 
+            color: #ff6f6f;
+            margin: 0 0 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            max-width: 500px; 
+            padding: 10px;
+            border: 2px solid #ff6f6f;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #ff6f6f;
+        }
+
+        button {
+            width: 100%;
+            max-width: 500px; 
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #ff6f6f;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #ff4f4f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Adicionar Música</h2>
+    <form method="post" action="musicas.php.php">
+        <input type="text" id="titulo" name="titulo" placeholder="Título" required>
+        <input type="number" id="duracao" step="0.01" name="duracao" placeholder="Duração (minutos)" required>
+        <input type="text" id="compositor" name="compositor" placeholder="Compositor" required>
+        <input type="text" id="album" name="album" placeholder="Álbum" required>
+        <button type="submit">Adicionar</button>
+    </form>
+</div>
+</body>
+</html>
